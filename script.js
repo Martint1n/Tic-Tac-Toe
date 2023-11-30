@@ -9,21 +9,31 @@ addeventlistener click
 */
 
 let game = gameBoard();
+/*let count = {};
+for (let i in game){
+    for (const element of game[i]) {
+        count[element] = (count[element] || 0) + 1;
+    }
+    }
+console.log(game)
+console.log(count)*/
 
 function selectMarker(nombre1, nombre2, board){
     let count = {};
-    for (const element of board) {
+    for (let i in game){
+        for (const element of board[i]) {
         count[element] = (count[element] || 0) + 1;
+        }
     }
-    if (count[""] %2 !== 0){
-        board[nombre1][nombre2] = "X"
-    }else{
-        board[nombre1][nombre2] = "O"
-    }
+        if (count[""] %2 !== 0){
+            board[nombre1][nombre2] = "X";
+        }else{
+            board[nombre1][nombre2] = "O";
+        }
     game = board;
     rule();
-    console.log(board);
     console.log(game);
+    console.log(count[""])
 }
 
 function rule(){
@@ -36,11 +46,16 @@ function rule(){
     conditions de victoire diagonales
     [0][0],[1][1],[2][2] ; [0][2],[1][1],[2][0]
     */
-    if (game[0][0] == game[0][1] == game[0][2] == "X" || "O"){
+    if (game[0][0] == "X" && game[0][1] == "X" && game[0][2] == "X"){
         console.log("win")
     }else if (game[1][0] == game[1][1] == game[1][2] == "X" || "O"){
 
     }
+    /*
+    i, j et k  = []
+    i, j et k dans game pour concate 
+    si i 
+    */
 }
 
 function gameBoard(){
