@@ -33,7 +33,7 @@ const player = {
                     this.reset();
                 }
             }else if (game[0][row] == game[1][row] && game[1][row] == game[2][row] && game[2][row] !== ""){
-                if (game[row][0] == "X"){
+                if (game[0][row] == "X"){
                     window.alert("winner");
                     this.reset();
                 }else {
