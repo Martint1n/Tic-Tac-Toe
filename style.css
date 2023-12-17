@@ -1,0 +1,11 @@
+.container{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    height: 400px;
+    width: 400px;
+}
+div.container > div {
+    height: 100px;
+    width: 100px;
+    background-color: aquamarine;
+}
