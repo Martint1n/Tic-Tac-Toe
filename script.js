@@ -11,6 +11,7 @@ const player = {
             count[element] = (count[element] || 0) + 1;
             }
         }
+        if (button.innerHTML !== "X" && button.innerHTML !== "O"){
             if (count[""] %2 !== 0){
                 board[nombre1][nombre2] = this.player1;
                 button.innerHTML = `${this.player1}`
@@ -18,6 +19,8 @@ const player = {
                 board[nombre1][nombre2] = this.player2;
                 button.innerHTML = `${this.player2}`
             }
+        }else {
+        }
         game = board;
         console.log(game);
         console.log(count[""])
